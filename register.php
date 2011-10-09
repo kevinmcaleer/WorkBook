@@ -23,7 +23,7 @@ if (isset($_POST['submitted'])) {
         $newUser->save();
         $newUser->SendWelcomeEmail();
         echo '<div class="tb">Submitted!</div>';
-        echo 'We have sent a Welcome email to the email address: $newUser->email, this includes your temporary password'; 
+        echo 'We have sent a Welcome email to the email address: ', $newUser->email,' this includes your temporary password'; 
     }    
     
 } else {

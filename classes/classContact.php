@@ -80,7 +80,7 @@ class Contact {
         $to = $this->email;
         $subject = "Welcome to Princify";
 
-        mail($to, $subject, $message);
+        mail($to, $subject, $welcomemsg);
     }
 
 }
