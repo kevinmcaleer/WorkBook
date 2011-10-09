@@ -29,7 +29,7 @@ class Password {
         $this->password = "xxxxxxxx";
         $this->length = $p_len;
 //$this->password[0] = $this->length;
-        $n = 0;
+        $n = 1;
         
         echo 'Starting Length is: ', $this->length, '<br />';
         while ($n < $this->length)
