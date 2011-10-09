@@ -8,7 +8,7 @@
 
     <?php
     include_once 'classes/classContact.php';
-    $myContactsList = new classContactsView;
+    $myContactsList = new classContactView;
     $myContactsList->show(1); // TODO change this to be the currently logged in user
     ?>
 
