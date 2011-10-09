@@ -5,10 +5,10 @@
 // @version 1.0
 // @description Displays the Privacy Policy
 
-include '/includes/header.php';
+include 'includes/header.php';
 ?>
 <h1>Privacy Policy</h1>
 
 <?php
-include '/includes/footer.php';
+include 'includes/footer.php';
 ?>
