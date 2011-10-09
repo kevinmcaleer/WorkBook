@@ -17,7 +17,7 @@ else {
 ?>
 
 <h1>Register</h1>
-<form>
+<form action="register.php" method="post">
     <table>
         <tr><td>Firstname: <input type="textbox" name="firstname">Firstname</input> </td></tr>
         <tr><td>Surname: <input type="textbox" name="surname">Surname</input></td></tr>
