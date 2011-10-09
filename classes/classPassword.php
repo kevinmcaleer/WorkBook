@@ -30,6 +30,15 @@ class Password {
         $this->length = $p_len;
 //$this->password[0] = $this->length;
         $n = 0;
+        
+        echo $this->length;
+        while ($n < $this->length)
+        {
+            echo $n;
+            $n++;
+        }
+            
+        /*
         while ($n < $this->length) {
             $n++;
             echo 'N is: ', $n, ' Password is:', $this->password, ' <br />';
@@ -57,8 +66,10 @@ class Password {
             }
         } // end while
         return $this->password;
+         */ 
     }
 
+         
 // end function GeneratePassword
 }
 
