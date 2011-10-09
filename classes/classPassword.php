@@ -68,18 +68,19 @@ class Password {
             } elseif ($dice == 3 AND $this->symbol_include) {
                 //echo 'symbol';
                 $ch = rand(33, 47);
-                if($ch = 34 or $ch=39) $ch = '-';
+                if ($ch = 34 or $ch = 39) {
+                    $ch = 45;
+                }
                 $txt = chr($ch);
                 // echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = $txt;
                 $n++;
             }
         }
-       // echo ' ', $this->password, ' <br />';
-    
+        // echo ' ', $this->password, ' <br />';
+
         return $this->password;
     }
-    
 
 // end function GeneratePassword
 }
