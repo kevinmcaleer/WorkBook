@@ -47,6 +47,8 @@ class Contact {
         include 'includes/connection.php';
         $query = "SELECT id, email, pass FROM contacts WHERE email='$email' AND pass = '$password'";
         $result = pg_query($connection, $query);
+        $row = pg_fetch_array($result);
+        $this->id = $row['id'];
         return $result;
     }
 

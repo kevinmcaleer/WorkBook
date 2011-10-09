@@ -38,7 +38,7 @@ if (isset($_POST['submitted'])) {
     if ($check) { // OK!
         // Set the session data:
         session_start();
-
+        
         $_SESSION['id'] = $myAccount->id;
         $_SESSION['firstname'] = $myAccount->firstname;
 
