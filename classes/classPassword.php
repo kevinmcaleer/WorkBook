@@ -40,7 +40,7 @@ class Password {
 
 
 
-            echo 'Dice is: ', $dice, ' ';
+           // echo 'Dice is: ', $dice, ' ';
             if ($dice == 0 AND $this->alpha_upper_include) {
                 // alpha upper
                // echo 'alpha upper';
@@ -73,8 +73,9 @@ class Password {
                 $this->password[$n] = $txt;
                 $n++;
             }
-            echo ' ', $this->password, ' <br />';
+            
         }
+        echo ' ', $this->password, ' <br />';
 
         /*
           while ($n < $this->length) {
