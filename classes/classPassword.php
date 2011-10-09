@@ -20,7 +20,7 @@ echo 'Lenth is: ', $this->length, '<br />';
 echo 'Alpha_upper_include is: ', $this->alpha_upper_include, '<br />';
 echo 'Alpha_lower_include is:', $this->alpha_lower_include, '<br />';
 echo 'Number_include is:', $this->number_include, '<br />';
-echo 'Symbol_Include is: ', $this->symbol_include, '<br />';
+echo 'Symbol_Include is: ', $this->symbol_include, '<br /><br />';
         
         $this->length = $p_len;
         $this->password = "xxxxxxxx";
@@ -32,7 +32,7 @@ echo 'N is: ', $n,' Password is:', $this->password,' <br />';
 
 // choose a character type
             $dice = rand(0,3); // roll the dice
-            echo 'Dice Roll Result was: ', $dice,' <br />';
+            echo 'Dice Roll Result was: ', $dice;
             switch ($dice) {
                 case 0: // alpha_upper
                     echo 'Its an alpha Upper Case';
