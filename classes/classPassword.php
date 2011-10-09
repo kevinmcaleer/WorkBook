@@ -29,13 +29,13 @@ class Password {
         $this->password = "xxxxxxxx";
         $this->length = $p_len;
 //$this->password[0] = $this->length;
-        $n = 1;
+        $n = 0;
         
         echo 'Starting Length is: ', $this->length, '<br />';
         while ($n < $this->length)
         {
             echo 'N is: ', $n, '<br />';
-            $n++;
+            
             $dice =rand(0,3);
             echo 'Dice is: ', $dice, ' ';
             if ($dice == 0) {
@@ -66,7 +66,7 @@ class Password {
                 $this->password[$n] = $txt;
             }
                 echo ' ', $this->password,' <br />';
-                
+                $n++;
         }
             
         /*
