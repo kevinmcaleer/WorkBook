@@ -49,7 +49,16 @@ class Contact {
         $result = pg_query($connection, $query);
         return $result;
     }
-
+public function checkExists($email)
+{
+    include 'includes/connection.php';
+    $query = "SELECT id, email FROM contact WHERE email=$this->email";
+    $result = pg_query($connection, $query);
+    $row = pg_fetch_all($result);
+    echo $row;
+    
+    return false; //TODO change this to return true if there are more than 1 rows
+}
 }
 
 ?>
