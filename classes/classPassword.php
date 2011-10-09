@@ -43,9 +43,9 @@ class Password {
             
             echo 'Dice Roll Result was: ', $dice, ' <br/> ';
             switch ($dice) {
-                case alpha_upper_include: {// alpha_upper
+                case alpha_upper_include: { // alpha_upper
                         echo 'Its an alpha Upper Case';
-                        if ($this->alpha_upper_include == TRUE) {
+                        if ($this->alpha_upper_include) {
 
                             $txt = chr(rand(1, 26));
                             echo $txt;
@@ -58,7 +58,7 @@ class Password {
                     }
                 case alpha_lower_include: { // alpha_lower
                         echo 'Its a Lower Case Alpha';
-                        if ($this->alpha_lower_include == TRUE) {
+                        if ($this->alpha_lower_include) {
                             $txt = chr(rand(1, 26));
                             echo $txt;
                             $this->password[$n] = strtolower($txt);
@@ -67,14 +67,14 @@ class Password {
                     }
                 case number:{// number
                     echo 'Its a Number: ';
-                    if ($this->number_include == TRUE) {
+                    if ($this->number_include) {
                         $this->password[$n] = rand(0, 9);
                     }
 
                     break;}
                 case symbol:{// symbol
                     echo 'Its a Symbol: ';
-                    if ($this->symbol_include == TRUE) {
+                    if ($this->symbol_include) {
                         // TODO include more symbols to chose from!
                         $this->password[$n] = '!';
                     }
