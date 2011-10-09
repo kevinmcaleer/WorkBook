@@ -29,8 +29,8 @@ class classContactView {
 
         // Display the Contact
         echo '<div class"contact">';
-        echo 'Firstname: ', $myContact->firstname;
-        echo 'Surname: ', $myContact->surname;
+        echo 'Firstname: ', $myContact->firstname, '<br />';
+        echo 'Surname: ', $myContact->surname, '<br />';
         echo '</div>';
     }
 
