@@ -65,9 +65,10 @@ if ($error) {
     echo '<div class="box">';
     echo 'Sorry there was a problem with your username and password';
     echo '</div>';
-} else {
+} 
+
     include 'includes/login_page.php';
-}
+
 
 
 include 'includes/footer.php';
