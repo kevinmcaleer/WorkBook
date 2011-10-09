@@ -30,7 +30,7 @@ class Contact {
     public function load($id) {
         include 'includes/connection.php';
         $query = "SELECT id, firstname, surname FROM contacts WHERE id = $this->id";
-        pg_query($connection, $query);
+        $result = pg_query($connection, $query);
 
         $rows = pg_fetch_array($result);
         $this->id = $id;
