@@ -19,21 +19,22 @@ class Password {
 
 // for the length of the password string, choose  one of the 4 types available (if true) and then
 // initiate variables
+   /*
         echo 'password is: ', $this->password, '<br />';
         echo 'Lenth is: ', $this->length, '<br />';
         echo 'Alpha_upper_include is: ', $this->alpha_upper_include, '<br />';
         echo 'Alpha_lower_include is:', $this->alpha_lower_include, '<br />';
         echo 'Number_include is: ', $this->number_include, '<br />';
         echo 'Symbol_Include is: ', $this->symbol_include, '<br /><br />';
-
+*/
         $this->password = "xxxxxxxx";
         $this->length = $p_len;
 //$this->password[0] = $this->length;
         $n = 0;
 
-        echo 'Starting Length is: ', $this->length, '<br />';
+      //  echo 'Starting Length is: ', $this->length, '<br />';
         while ($n < $this->length) {
-            echo 'N is: ', $n, '<br />';
+          //  echo 'N is: ', $n, '<br />';
 
             $dice = rand(0, 3);
 
@@ -42,33 +43,33 @@ class Password {
             echo 'Dice is: ', $dice, ' ';
             if ($dice == 0 AND $this->alpha_upper_include) {
                 // alpha upper
-                echo 'alpha upper';
+               // echo 'alpha upper';
                 $ch = rand(97, 122);
-                echo 'ch = ', $ch, ' ';
+               // echo 'ch = ', $ch, ' ';
                 $txt = chr($ch);
-                echo ' ASCII: ', $txt, ' ';
+                //echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = strtoupper($txt);
                 $n++;
             } elseif ($dice == 1 AND $this->alpha_lower_include) {
-                echo 'alpha lower';
+                //echo 'alpha lower';
                 $ch = rand(65, 90);
-                echo 'ch = ', $ch, ' ';
+               // echo 'ch = ', $ch, ' ';
                 $txt = chr($ch);
-                echo ' ASCII: ', $txt, ' ';
+                // echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = strtolower($txt);
                 $n++;
             } elseif ($dice == 2 AND $this->number_include) {
-                echo 'number';
+               // echo 'number';
                 $ch = rand(48, 57);
                 $txt = chr($ch);
-                echo 'ASCII ', $txt, ' ';
+               // echo 'ASCII ', $txt, ' ';
                 $this->password[$n] = $txt;
                 $n++;
             } elseif ($dice == 3 AND $this->symbol_include) {
-                echo 'symbol';
+                //echo 'symbol';
                 $ch = rand(33, 47);
                 $txt = chr($ch);
-                echo ' ASCII: ', $txt, ' ';
+               // echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = $txt;
                 $n++;
             }
