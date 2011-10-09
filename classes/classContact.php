@@ -41,7 +41,6 @@ class Contact {
         $this->email = $rows["email"];
         $this->pass = $rows["pass"];
         pg_close($connection);
-        echo $this->firstname;
     }
 
     public function checkValid($email, $password) {
@@ -82,9 +81,10 @@ class Contact {
         $welcomemsg = "Welcome to Princify. Thank you for registering, your temporary password is: $this->pass Please goto beta.princify.com/login.php to login now.";
         $to = $this->email;
         $subject = "Welcome to Princify";
-        $headers = "From: Prinify <no-reply@princify.com> "; 
-        mail($to, $subject, $welcomemsg,$headers);
+        $headers = "From: Prinify <no-reply@princify.com> ";
+        mail($to, $subject, $welcomemsg, $headers);
     }
 
 }
+
 ?>
