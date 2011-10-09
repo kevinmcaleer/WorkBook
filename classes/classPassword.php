@@ -37,8 +37,19 @@ class Password {
             echo 'N is: ', $n, '<br />';
             $n++;
             $dice =rand(0,4);
-            echo 'Dice is: ', $dice;
-            
+            echo 'Dice is: ', $dice, ' ';
+            if ($dice == 0) {
+                // alpha upper
+                echo 'alpha upper';
+            } elseif ($dice == 1) {
+                echo 'alpha lower';
+            } elseif ($dice == 2) {
+                echo 'number';
+            } elseif ($dice == 3) {
+                echo 'symbol';
+            }
+                echo '<br />';
+                
         }
             
         /*
