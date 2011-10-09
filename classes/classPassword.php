@@ -34,6 +34,11 @@ class Password {
                         echo $txt;
                         $this->password[$n] = strtoupper($txt);
                     }
+                    else
+                    {
+                        echo 'alpha_upper_include must have been false <br />';
+                        
+                    }
                     break;
                 case 1:// alpha_lower
                     if ($this->alpha_lower_include == TRUE) {
