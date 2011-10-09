@@ -57,7 +57,7 @@ include 'includes/header.php';
             <tr>
                 <td>Email<input type="text" name="email"></input></td>
                 <td>Password<input type="password" name="pass"></input></td>
-                <td>Submit<input type="submitted"></input></td>
+                <td>Submit<input type="submit"></input></td>
                 
             </tr>
         </table>    
