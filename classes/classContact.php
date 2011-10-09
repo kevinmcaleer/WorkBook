@@ -63,6 +63,12 @@ class Contact {
             return false;
         }
     }
+public function save(){
+    include 'includes/connection.php';
+    $query = "INSERT INTO contacts (firstname, surname, email) VALUES " + "('"+ $this->firstname + "('" + $this->firstname +"','"+ $this->surname + "','" + $this->email + "')" ;
+    $result = pg_query($connection, $query);
+    
+}
 
 }
 ?>
