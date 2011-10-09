@@ -4,6 +4,10 @@
 // @version 1.0
 
 session_start();
+if (!isset($_SESSION['id'])) {
+    include 'login_page';
+    exit;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -13,16 +17,13 @@ session_start();
     </head>
     <body>
         <table><tr><td>        
-                    <?php
-                    include 'includes/nav.php';
-                    ?>
+<?php
+include 'includes/nav.php';
+?>
                 </td>
                 <td>
                     <?php
-                    // TODO if logged in the show acount, otherwise show the login link
-
-                    if (isset($_SESSION['id']))
-                    {
+                    if (isset($_SESSION['id'])) {
                         include_once 'classes/classContact.php';
                         include_once 'classes/classContactView.php';
                         $myContact = new Contact();
@@ -41,3 +42,4 @@ session_start();
                 </td></tr>
             <tr>
                 <td>
+
