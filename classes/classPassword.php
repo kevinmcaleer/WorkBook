@@ -57,11 +57,13 @@ class Password {
                 $ch = rand(48,57);
                 $txt = chr($ch);
                 echo 'ASCII ', $txt, ' ' ;
+                $this->password[$n] = $txt;
             } elseif ($dice == 3) {
                 echo 'symbol';
                 $ch = rand(33,47);
                 $txt = chr($ch);
                 echo ' ASCII: ', $txt, ' ';
+                $this->password[$n] = $txt;
             }
                 echo ' ', $this->password,' <br />';
                 
