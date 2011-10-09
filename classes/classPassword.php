@@ -43,13 +43,13 @@ class Password {
                 echo 'alpha upper';
                 $ch = rand(97,122); 
                 echo 'ch = ', $ch, ' ';
-                $txt = chr(ch);
+                $txt = chr($ch);
                 echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = strtoupper($txt);
             } elseif ($dice == 1) {
                 echo 'alpha lower';
                 $ch = rand(65,90); echo 'ch = ', $ch, ' ';
-                $txt = chr(ch);
+                $txt = chr($ch);
                 echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = strtolower($txt);
             } elseif ($dice == 2) {
