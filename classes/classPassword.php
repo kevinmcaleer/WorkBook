@@ -31,7 +31,7 @@ class Password {
         //$this->password[0] = $this->length;
         $n = 0;
         while ($n < $this->length) {
-
+            $n++;
             echo 'N is: ', $n, ' Password is:', $this->password, ' <br />';
 
 // choose a character type
