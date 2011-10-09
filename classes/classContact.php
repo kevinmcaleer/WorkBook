@@ -66,9 +66,12 @@ class Contact {
 
     public function save() {
         include 'includes/connection.php';
-        $query = "INSERT INTO contacts (firstname, surname, email) VALUES ('$this->firstname', '$this->surname', '$this->email')";
+        include 'includes/classPassword.php';
+
+        $newPass = new Password();  // Generate a new password
+        $this->pass = $newPass->generatePassword();
+        $query = "INSERT INTO contacts (firstname, surname, email, pass) VALUES ('$this->firstname', '$this->surname', '$this->email', '$this->pass')";
         $result = pg_query($connection, $query);
-        $this->pass = random(8);
     }
 
     public function SendWelcomeEmail() {
@@ -76,7 +79,7 @@ class Contact {
         $welcomemsg = "Welcome to Princify. Thank you for registering, your temporary password is: $this->pass Please goto beta.princify.com/login.php to login now";
         $to = $this->email;
         $subject = "Welcome to Princify";
-        
+
         mail($to, $subject, $message);
     }
 
