@@ -15,12 +15,12 @@ class Password {
 
 // for the length of the password string, choose  one of the 4 types available (if true) and then
 // initiate variables
-echo 'password is: ', $this->password;
-echo 'Lenth is: ', $this->length;
-echo 'Alpha_upper_include is: ', $this->alpha_upper_include;
-echo 'Alpha_lower_include is:', $this->alpha_lower_include;
-echo 'Number_include is:', $this->number_include;
-echo 'Symbol_Include is: ', $this->symbol_include;
+echo 'password is: ', $this->password, '<br />';
+echo 'Lenth is: ', $this->length, '<br />';
+echo 'Alpha_upper_include is: ', $this->alpha_upper_include, '<br />';
+echo 'Alpha_lower_include is:', $this->alpha_lower_include, '<br />';
+echo 'Number_include is:', $this->number_include, '<br />';
+echo 'Symbol_Include is: ', $this->symbol_include, '<br />';
         
         $this->length = $p_len;
         $this->password = "xxxxxxxx";
