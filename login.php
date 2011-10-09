@@ -30,11 +30,12 @@ if (isset($_POST['submitted'])) {
 
         exit(); // Quit the script
     } else { // Unsuccessful
+        session_start();
         $error = true;
     }
 } // end of the main submit conditional
 
-session_start();
+
 
 include 'includes/header.php';
 //include 'includes/login_page.inc.php';
