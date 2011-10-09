@@ -84,7 +84,15 @@ class Contact {
         $headers = "From: Prinify <no-reply@princify.com> ";
         mail($to, $subject, $welcomemsg, $headers);
     }
-
+public function show()
+{
+    echo 'id ', $this->id;
+    echo 'Email: ', $this->email;
+    echo 'Password: ', $this->pass;
+    echo 'Firstname: ', $this->firstname;
+    echo 'Surname: ', $this->surname;
+    
+}
 }
 
 ?>
