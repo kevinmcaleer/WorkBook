@@ -30,7 +30,7 @@ session_start();
                         echo 'Hi, ';
                         echo $myContact->firstname, ' ', $myContact->surname;
                         echo '</a>';
-                        
+                        echo '<a href="logout.php">Logout</a>';
                     }else
                         echo '<a href="login.php">Login</a>';
                     ?>
