@@ -24,7 +24,7 @@ class Password {
         echo 'Lenth is: ', $this->length, '<br />';
         echo 'Alpha_upper_include is: ', $this->alpha_upper_include, '<br />';
         echo 'Alpha_lower_include is:', $this->alpha_lower_include, '<br />';
-        echo 'Number_include is:', $this->number_include, '<br />';
+        echo 'Number_include is: ', $this->number_include, '<br />';
         echo 'Symbol_Include is: ', $this->symbol_include, '<br /><br />';
 
         $this->length = $p_len;
@@ -41,7 +41,7 @@ class Password {
             // check if the dice value was valid, otherwise roll again
             if($dice)
             
-            echo 'Dice Roll Result was: ', $dice, ' ';
+            echo 'Dice Roll Result was: ', $dice, ' <br/> ';
             switch ($dice) {
                 case alpha_upper_include: {// alpha_upper
                         echo 'Its an alpha Upper Case';
