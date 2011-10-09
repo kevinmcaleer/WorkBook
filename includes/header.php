@@ -27,6 +27,7 @@ session_start();
                         $myContact = new Contact();
                         $myContact->load($_SESSION['id']);
                         echo '<a href="account.php">';
+                        echo 'Hi, ';
                         echo $myContact->firstname, ' ', $myContact->surname;
                         echo '</a>';
                         
