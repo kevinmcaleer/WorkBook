@@ -10,6 +10,10 @@ if (isset($_POST['submitted'])) {
 
     include 'classes/classContact.php';     // include the contact class
     $newUser = new Contact();               // create a new contact
+    $newUser->email = $_POST['email'];
+    $newUser->firstname = $_POST['firstname'];
+    $newUser->surname = $_POST['surname'];
+    
     if ($newUser->checkExists($_POST['email'])) {
         // if TRUE the user must already have registered this email address
         echo 'Sorry that email address is already registered.';
