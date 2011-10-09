@@ -1,5 +1,6 @@
 <?php
-
 // nav.php
 ?>
-<a href="index.php">Home</a> | Profile | Help 
+<div class="nav">
+    <a href="index.php">Home</a> | Profile | Help 
+</div>
