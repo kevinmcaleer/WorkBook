@@ -74,7 +74,7 @@ class Password {
                 $n++;
             }
         }
-        echo ' ', $this->password, ' <br />';
+       // echo ' ', $this->password, ' <br />';
     
         return $this->password;
     }
