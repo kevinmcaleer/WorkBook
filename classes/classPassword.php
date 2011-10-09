@@ -23,25 +23,25 @@ class Password {
 
 
 // choose a character type
-            $dice = rand(4); // roll the dice
+            $dice = rand(0,3); // roll the dice
             switch ($dice) {
                 case 0: // alpha_upper
-                    if ($this->alpha_upper_include = TRUE) {
+                    if ($this->alpha_upper_include == TRUE) {
                         $password[$n] = strtoupper(chr(rand(1, 26)));
                     }
                     break;
                 case 1:// alpha_lower
-                    if ($this->alpha_lower_include = TRUE) {
+                    if ($this->alpha_lower_include == TRUE) {
                         $password[$n] = strtolower(chr(rand(1, 26)));
                     }
                     break;
                 case 2:// number
-                    if ($this->number_include = TRUE){
+                    if ($this->number_include == TRUE){
                         $password[$n] = rand(0,9);
                     }
                     break;
                 case 3:// symbol
-                    if ($this->symbol_include = TRUE) {
+                    if ($this->symbol_include == TRUE) {
                         // TODO include more symbols to chose from!
                         $password[$n] = '!';
                     }
