@@ -5,6 +5,25 @@
 // @author Kevin McAleer
 // @version 1.0
 
+function absolute_url($page = 'index.php') {
+
+// Start defining the URL...
+// URL is http:// plus the host name plus the current directory:
+$url = 'http://'. $_SERVER['HTTP_HOST']. dirname($_SERVER['PHP_SELF']);
+
+// Remove any trailing slashes:
+
+$url = rtrim($url,'/\\');
+
+// Add the page:
+
+$url .= '/'. $page;
+
+// Return the URL:
+
+return $url;
+} // ebd if absolute_URL() function
+
 if (isset($_POST['submitted'])) {
 
     include 'classes/classContact.php';
