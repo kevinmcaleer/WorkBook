@@ -30,7 +30,7 @@ session_start();
                         //$myContact->show();
                         echo '<a href="account.php">';
                         echo 'Hi, ';
-                        echo $myContact->firstname, ' ', $myContact->surname;
+                        echo $myContact->firstname, ' ', $myContact->surname, ' ';
                         echo '</a>';
                         echo '<a href="logout.php">Logout</a>';
                         //$myContact->show();
