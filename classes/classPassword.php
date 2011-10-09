@@ -19,7 +19,7 @@ class Password {
         $this->length = $p_len;
         $this->password = "xxxxxxxx";
         //$this->password[0] = $this->length;
-        $n = 0;
+        $n = 1;
         while ($n <= $this->length) {
             $n++;
 
