@@ -47,6 +47,7 @@ echo 'N is: ', $n,' Password is:', $this->password,' <br />';
                         echo 'alpha_upper_include must have been false <br />';
                         
                     }
+                    echo 'number';
                     break;
                 case 1:// alpha_lower
                    echo 'Its a Lower Case Alpha';
