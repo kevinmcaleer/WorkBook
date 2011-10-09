@@ -20,7 +20,7 @@ class classContactView {
         
     }
     public function show() {
-        include 'includes/classContact.php';
+        include_once 'class/classContact.php';
         $myContact = new Contact();
 
 // TODO need to remove this section as its just for testing
