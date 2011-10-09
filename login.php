@@ -18,7 +18,7 @@ if (isset($_POST['submitted'])) {
     $e = $_POST['email'];
     $p = $_POST['pass'];
     $check = $myAccount->checkValid($e, $p);
-    echo $check;
+    //echo $check;
 
     if ($check) { // OK!
         // Set the session data:
