@@ -26,6 +26,7 @@ class Password {
 
 // choose a character type
             $dice = rand(0,3); // roll the dice
+            echo 'Dice Roll Result was: ', $dice;
             switch ($dice) {
                 case 0: // alpha_upper
                     if ($this->alpha_upper_include == TRUE) {
