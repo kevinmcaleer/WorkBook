@@ -33,6 +33,8 @@ class Contact {
         $result = pg_query($connection, $query);
 
         $rows = pg_fetch_array($result);
+        if(pg_num_rows($result)>0)
+        {
         $this->id = $id;
         $this->firstname = $rows["firstname"];
         $this->surname = $rows["surname"];
@@ -40,6 +42,10 @@ class Contact {
         $this->gender = $rows["gender"];
         $this->email = $rows["email"];
         $this->pass = $rows["pass"];
+        }
+        else {
+            echo 'no records found.';
+        }
         pg_close($connection);
     }
 
