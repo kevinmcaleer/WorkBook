@@ -55,8 +55,8 @@ include 'includes/header.php';
     <form action="login.php" method="post">
         <table>
             <tr>
-                <td><input type="text" name="email">Email</input></td>
-                <td><input type="text" name="pass">Password</input></td>
+                <td>Email<input type="text" name="email"></input></td>
+                <td>Password<input type="text" name="pass"></input></td>
                 
             </tr>
         </table>    
