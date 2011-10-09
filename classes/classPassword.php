@@ -10,6 +10,11 @@ class Password {
     public $alpha_lower_include = TRUE;
     public $number_include = TRUE;
     public $symbol_include = TRUE;
+    const alpha_upper_include = 0;
+    const alpha_lower_include = 1;
+    const number = 2;
+    const symbol = 3;
+    
 
     public function generatePassword($p_len) {
 
@@ -32,9 +37,13 @@ class Password {
 
 // choose a character type
             $dice = rand(0, 3); // roll the dice
+            
+            // check if the dice value was valid, otherwise roll again
+            if($dice)
+            
             echo 'Dice Roll Result was: ', $dice, ' ';
             switch ($dice) {
-                case 0: {// alpha_upper
+                case alpha_upper_include: {// alpha_upper
                         echo 'Its an alpha Upper Case';
                         if ($this->alpha_upper_include == TRUE) {
 
@@ -47,7 +56,7 @@ class Password {
 
                         break;
                     }
-                case 1: { // alpha_lower
+                case alpha_lower_include: { // alpha_lower
                         echo 'Its a Lower Case Alpha';
                         if ($this->alpha_lower_include == TRUE) {
                             $txt = chr(rand(1, 26));
@@ -56,14 +65,14 @@ class Password {
                         }
                         break;
                     }
-                case 2:{// number
+                case number:{// number
                     echo 'Its a Number: ';
                     if ($this->number_include == TRUE) {
                         $this->password[$n] = rand(0, 9);
                     }
 
                     break;}
-                case 3:{// symbol
+                case symbol:{// symbol
                     echo 'Its a Symbol: ';
                     if ($this->symbol_include == TRUE) {
                         // TODO include more symbols to chose from!
