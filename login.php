@@ -55,10 +55,12 @@ include 'includes/header.php';
     <form action="login.php" method="post">
         <table>
             <tr>
-                <td><input type="text"name="Email:">Email</input></td>
+                <td><input type="text" name="email">Email</input></td>
+                <td><input type="text" name="pass">Password</input></td>
+                
             </tr>
         </table>    
-        
+        <input type="hidden" value="submit"></input>
     </form>        
     
 </div>
