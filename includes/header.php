@@ -11,15 +11,16 @@
     </head>
     <body>
         <table><tr><td>        
-   <?php
-   include 'includes/nav.php';
-   
-   ?>
+                    <?php
+                    include 'includes/nav.php';
+                    ?>
                 </td>
                 <td>
                     <?php
                     // TODO if logged in the show acount, otherwise show the login link
                     echo '<a href="login.php">Login</a>';
                     ?>
-                    
-                </td>
+
+                </td></tr>
+           <tr>
+            <td>
