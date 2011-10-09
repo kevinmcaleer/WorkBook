@@ -12,7 +12,7 @@
  */
 
 class classContactView {
-    private $myContact;
+    public $myContact;
     public function load($id)
     {
         $myContact = new Contact();
@@ -31,8 +31,8 @@ class classContactView {
         echo '<div class"contact">';
         echo 'Firstname: ', $myContact->firstname, '<br />';
         echo 'Surname: ', $myContact->surname, '<br />';
-        echo 'Email', $myContact->email, '<br />';
-        echo 'Pass', $myContact->pass, '<br />';
+        echo 'Email: ', $myContact->email, '<br />';
+        echo 'Pass: ', $myContact->pass, '<br />';
         echo '</div>';
     }
 
