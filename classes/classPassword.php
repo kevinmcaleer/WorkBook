@@ -41,14 +41,16 @@ class Password {
             if ($dice == 0) {
                 // alpha upper
                 echo 'alpha upper';
+                $this->password[$n] = strtoupper(chr(rand(1,26)));
             } elseif ($dice == 1) {
                 echo 'alpha lower';
+                $this->password[$n] = strtolower(chr(rand(1,26)));
             } elseif ($dice == 2) {
                 echo 'number';
             } elseif ($dice == 3) {
                 echo 'symbol';
             }
-                echo '<br />';
+                echo $this->password,' <br />';
                 
         }
             
