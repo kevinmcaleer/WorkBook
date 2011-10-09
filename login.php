@@ -57,6 +57,9 @@ if ($error)
     echo 'Sorry there was a problem with your username and password';
     echo '</div>';
 }
+ else {
+ {
+
 ?>
 <h1>Login page</h1>
 <div class="box">
@@ -76,5 +79,6 @@ if ($error)
 
 <a href="register.php">Click here to Register</a>
 <?php
+ }
 include 'includes/footer.php';
 ?>
