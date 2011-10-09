@@ -19,9 +19,10 @@ else {
 <h1>Register</h1>
 <form action="register.php" method="post">
     <table>
-        <tr><td>Firstname: <input type="textbox" name="firstname">Firstname</input> </td></tr>
-        <tr><td>Surname: <input type="textbox" name="surname">Surname</input></td></tr>
-        <tr><td>Submit:<button type="submit">Submit</button></td></tr>
+        <tr><td>Firstname: <input type="text" name="firstname">Firstname</input> </td></tr>
+        <tr><td>Surname: <input type="text" name="surname">Surname</input></td></tr>
+        <tr><td><input type="hidden" name="submitted" value="login"></input>
+        <tr><td>Submit<input type="submit" value="true"></td></tr>
     </table>
 
 
