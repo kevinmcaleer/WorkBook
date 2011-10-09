@@ -36,7 +36,7 @@ if (isset($_POST['submitted'])) {
     } else { // Unsuccessful
         // Assign $data to $errors for error reporting
         // in the login_page.inc.php file
-        $errors = $data;
+        echo "Sorry that wasn't correct";
     
     }
 
@@ -57,10 +57,11 @@ include 'includes/header.php';
             <tr>
                 <td>Email<input type="text" name="email"></input></td>
                 <td>Password<input type="text" name="pass"></input></td>
+                <td>Submit<input type="submit"></input></td>
                 
             </tr>
         </table>    
-        <input type="hidden" value="submit"></input>
+        <input type="hidden" value="submitted"></input>
     </form>        
     
 </div>
