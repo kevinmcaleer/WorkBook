@@ -12,16 +12,23 @@
  */
 
 class classContactView {
-    public $myContact;
+    private $myContact;
+    function classContactView()
+    {
+        include 'classes/classContact.php';
+        $myContact = new Contact();
+       
+    }
+    
     public function load($id)
     {
-        $myContact = new Contact();
+        //$myContact = new Contact();
         $myContact->load($id);
         
     }
     public function show() {
         include_once 'classes/classContact.php';
-        $myContact = new Contact();
+       // $myContact = new Contact();
 
 // TODO need to remove this section as its just for testing
         $myContact->firstname = 'Kevin';

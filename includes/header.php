@@ -29,7 +29,7 @@ session_start();
                         $myContact->load($_SESSION['id']);
                         echo '<a href="account.php">';
                         echo 'Hi, ';
-                        echo $myContact->myContact->firstname, ' ', $myContact->myContact->surname;
+                        echo $myContact->firstname, ' ', $myContact->surname;
                         echo '</a>';
                         echo '<a href="logout.php">Logout</a>';
                         $myContact->show();
