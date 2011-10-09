@@ -25,7 +25,7 @@ session_start();
                     {
                         include_once 'classes/classContact.php';
                         include_once 'classes/classContactView.php';
-                        $myContact = new classContactView();
+                        $myContact = new classContact();
                         $myContact->load($_SESSION['id']);
                         echo '<a href="account.php">';
                         echo 'Hi, ';
