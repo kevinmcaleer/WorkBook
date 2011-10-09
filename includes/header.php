@@ -5,7 +5,7 @@
 
 session_start();
 if (!isset($_SESSION['id'])) {
-    include 'login_page';
+    include 'includes/login_page.php';
     exit;
 }
 ?>
