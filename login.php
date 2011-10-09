@@ -39,8 +39,8 @@ if (isset($_POST['submitted'])) {
         // Set the session data:
         session_start();
 
-        $_SESSION['id'] = $data['id'];
-        $_SESSION['firstname'] = $data['firstname'];
+        $_SESSION['id'] = $myAccount->id;
+        $_SESSION['firstname'] = $myAccount->firstname;
 
         // Redirect:
 
