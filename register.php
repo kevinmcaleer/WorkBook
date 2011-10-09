@@ -15,13 +15,9 @@ if (isset($_POST['submitted'])) {
         echo 'Sorry that email address is already registered.';
     } else {
         // if FALSE then the user has not registered this email address
-        
+        echo 'Submitted!';
+    }    
     
-    ?>
-
-    Submitted!
-
-    <?php
 } else {
     ?>
 
