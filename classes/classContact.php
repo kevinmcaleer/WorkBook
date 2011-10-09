@@ -66,7 +66,7 @@ class Contact {
 
     public function save() {
         include 'includes/connection.php';
-        $query = "INSERT INTO contacts (firstname, surname, email) VALUES ('$this->firstname, $this->surname, $this->email)";
+        $query = "INSERT INTO contacts (firstname, surname, email) VALUES ('$this->firstname', '$this->surname', '$this->email')";
         echo $query;
         $result = pg_query($connection, $query);
     }
