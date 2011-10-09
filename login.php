@@ -36,7 +36,8 @@ if (isset($_POST['submitted'])) {
     } else { // Unsuccessful
         // Assign $data to $errors for error reporting
         // in the login_page.inc.php file
-        echo "Sorry that wasn't correct";
+        //echo "Sorry that wasn't correct";
+        $error = true;
     
     }
 
@@ -49,6 +50,13 @@ session_start();
 include 'includes/header.php';
 //include 'includes/login_page.inc.php';
 // include 'includes/footer.inc.php';
+
+if ($error)
+{
+    echo '<div class="box">';
+    echo 'Sorry there was a problem with your username and password';
+    echo '</div>';
+}
 ?>
 <h1>Login page</h1>
 <div class="box">
