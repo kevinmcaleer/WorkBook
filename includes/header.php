@@ -24,13 +24,14 @@ session_start();
                     if (isset($_SESSION['id']))
                     {
                         include 'classes/classContact.php';
-                        $myContact = new Contact();
+                        $myContact = new classContactView();
                         $myContact->load($_SESSION['id']);
                         echo '<a href="account.php">';
                         echo 'Hi, ';
                         echo $myContact->firstname, ' ', $myContact->surname;
                         echo '</a>';
                         echo '<a href="logout.php">Logout</a>';
+                        $myContact->show();
                     }else
                         echo '<a href="login.php">Login</a>';
                     ?>
