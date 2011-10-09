@@ -75,7 +75,10 @@ class Password {
             }
         }
         echo ' ', $this->password, ' <br />';
+    
+        return $this->password;
     }
+    
 
 // end function GeneratePassword
 }
