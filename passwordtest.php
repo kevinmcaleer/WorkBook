@@ -5,6 +5,6 @@ $myPass = new Password();
 $myPass->symbol_include = FALSE;
 $myPass->number_include = TRUE;
 $myPass->alpha_upper_include = TRUE;
-$test = $myPass->generatePassword(8);
+$test = $myPass->generatePassword(10);
 echo $test;
 ?>
