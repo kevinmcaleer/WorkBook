@@ -26,9 +26,9 @@ class Password {
         echo 'Alpha_lower_include is:', $this->alpha_lower_include, '<br />';
         echo 'Number_include is: ', $this->number_include, '<br />';
         echo 'Symbol_Include is: ', $this->symbol_include, '<br /><br />';
-
-        $this->length = $p_len;
+        
         $this->password = "xxxxxxxx";
+        $this->length = $p_len;
         //$this->password[0] = $this->length;
         $n = 0;
         while ($n < $this->length) {
