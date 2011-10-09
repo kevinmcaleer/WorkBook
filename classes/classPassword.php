@@ -26,17 +26,18 @@ echo 'Symbol_Include is: ', $this->symbol_include, '<br /><br />';
         $this->password = "xxxxxxxx";
         //$this->password[0] = $this->length;
         $n = 0;
-        while ($n <= $this->length) {
+        while ($n < $this->length) {
             $n++;
 echo 'N is: ', $n,' Password is:', $this->password,' <br />';
 
 // choose a character type
             $dice = rand(0,3); // roll the dice
-            echo 'Dice Roll Result was: ', $dice;
+            echo 'Dice Roll Result was: ', $dice, ' ';
             switch ($dice) {
                 case 0: // alpha_upper
                     echo 'Its an alpha Upper Case';
                     if ($this->alpha_upper_include == TRUE) {
+                       echo 'yes it is being executed';
                         $txt = chr(rand(1,26));
                         echo $txt;
                         $this->password[$n] = strtoupper($txt);
