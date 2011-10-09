@@ -26,11 +26,12 @@ class Contact {
     public $gender = 'M';
     public $DOB = '01/01/1980';
     public $pass = 'password';
+    public $changepassword = FALSE;
 
     public function load($id) {
         include 'includes/connection.php';
         $this->id = $id;
-        $query = "SELECT id, firstname, surname FROM contacts WHERE id = $this->id";
+        $query = "SELECT id, firstname, surname,DOB,email,pass,gender,changepassword FROM contacts WHERE id = $this->id";
         $result = pg_query($connection, $query);
 
         $rows = pg_fetch_array($result);
@@ -43,6 +44,7 @@ class Contact {
         $this->gender = $rows["gender"];
         $this->email = $rows["email"];
         $this->pass = $rows["pass"];
+        $this->changepassword = $rows['changepassword'];
         }
         else {
             // No Records Found
@@ -107,7 +109,7 @@ public function show()
     echo 'Password: ', $this->pass;
     echo 'Firstname: ', $this->firstname;
     echo 'Surname: ', $this->surname;
-    
+    echo 'changepassword: ', $this->changepassword;
 }
 }
 
