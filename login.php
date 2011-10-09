@@ -1,4 +1,5 @@
 <?php
+
 // @file Login.php
 // @project Princify
 // @author Kevin McAleer
@@ -38,7 +39,6 @@ if (isset($_POST['submitted'])) {
         // in the login_page.inc.php file
         //echo "Sorry that wasn't correct";
         $error = true;
-    
     }
 
     //pg_close($connection); // close he db connection
@@ -51,34 +51,14 @@ include 'includes/header.php';
 //include 'includes/login_page.inc.php';
 // include 'includes/footer.inc.php';
 
-if ($error)
-{
+if ($error) {
     echo '<div class="box">';
     echo 'Sorry there was a problem with your username and password';
     echo '</div>';
+} else {
+    include 'includes/login_page.php';
 }
- else {
- {
 
-?>
-<h1>Login page</h1>
-<div class="box">
-    <form action="login.php" method="post">
-        <table>
-            <tr>
-                <td>Email<input type="text" name="email"></input></td>
-                <td>Password<input type="password" name="pass"></input></td>
-                <td>Submit<input type="submit"></input></td>
-                
-            </tr>
-        </table>    
-        <input type="hidden" value="submitted"></input>
-    </form>        
-    
-</div>
 
-<a href="register.php">Click here to Register</a>
-<?php
- }
 include 'includes/footer.php';
 ?>
