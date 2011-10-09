@@ -23,8 +23,8 @@ session_start();
 
                     if (isset($_SESSION['id']))
                     {
-                        include 'classes/classContact.php';
-                        include 'classes/classContactView.php';
+                        include_once 'classes/classContact.php';
+                        include_once 'classes/classContactView.php';
                         $myContact = new classContactView();
                         $myContact->load($_SESSION['id']);
                         echo '<a href="account.php">';

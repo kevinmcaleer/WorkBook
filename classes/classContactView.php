@@ -15,7 +15,7 @@ class classContactView {
     private $myContact;
     function classContactView()
     {
-        include 'classes/classContact.php';
+        include_once 'classes/classContact.php';
         $myContact = new Contact();
        
     }
