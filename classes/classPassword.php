@@ -50,7 +50,7 @@ class Password {
             } elseif ($dice == 3) {
                 echo 'symbol';
             }
-                echo $this->password,' <br />';
+                echo ' ', $this->password,' <br />';
                 
         }
             
