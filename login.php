@@ -51,6 +51,8 @@ include 'includes/header.php';
 // include 'includes/footer.inc.php';
 ?>
 <h1>Login page</h1>
+
+<a href="register.php">Click here to Register</a>
 <?php
 include 'includes/footer.php';
 ?>
