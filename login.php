@@ -24,6 +24,7 @@ $url .= '/'. $page;
 return $url;
 } // ebd if absolute_URL() function
 
+$error = FALSE;
 if (isset($_POST['submitted'])) {
 
     include 'classes/classContact.php';
@@ -48,7 +49,10 @@ if (isset($_POST['submitted'])) {
         header("location: $url");
 
         exit(); // Quit the script
-    } 
+    } else
+    {
+        $error = TRUE;
+    }
 } // end of the main submit conditional
 
 
@@ -57,7 +61,7 @@ include 'includes/header.php';
 //include 'includes/login_page.inc.php';
 // include 'includes/footer.inc.php';
 
-if (!$check) {
+if ($error) {
     echo '<div class="box">';
     echo 'Sorry there was a problem with your username and password';
     echo '</div>';
