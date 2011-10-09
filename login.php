@@ -1,5 +1,4 @@
 <?php
-
 // @file Login.php
 // @project Princify
 // @author Kevin McAleer
@@ -14,9 +13,9 @@ if (isset($_POST['submitted'])) {
 
     include 'classes/classContact.php';
     $myAccount = new Contact();
-    
-   // checking that the user is valid
-     $e = $_POST['email'];
+
+    // checking that the user is valid
+    $e = $_POST['email'];
     $p = $_POST['pass'];
     $check = $myAccount->checkValid($e, $p);
     echo $check;
@@ -38,16 +37,19 @@ if (isset($_POST['submitted'])) {
         // Assign $data to $errors for error reporting
         // in the login_page.inc.php file
         $errors = $data;
-        echo 'sorry you are not logged in  - please login here.' ;
     }
 
-    pg_close($sc_connection); // close he db connection
+    //pg_close($connection); // close he db connection
 } // end of the main submit conditional
 //
 
 session_start();
 
-// include 'includes/header.inc.php';
+include 'includes/header.php';
 //include 'includes/login_page.inc.php';
 // include 'includes/footer.inc.php';
+?>
+<h1>Login page</h1>
+<?php
+include 'includes/footer.php';
 ?>
