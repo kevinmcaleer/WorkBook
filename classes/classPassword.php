@@ -30,77 +30,82 @@ class Password {
         $this->length = $p_len;
 //$this->password[0] = $this->length;
         $n = 0;
-        
+
         echo 'Starting Length is: ', $this->length, '<br />';
-        while ($n < $this->length)
-        {
+        while ($n < $this->length) {
             echo 'N is: ', $n, '<br />';
-            
-            $dice =rand(0,3);
+
+            $dice = rand(0, 3);
+
+
+
             echo 'Dice is: ', $dice, ' ';
-            if ($dice == 0) {
+            if ($dice == 0 AND $this->alpha_upper_include) {
                 // alpha upper
                 echo 'alpha upper';
-                $ch = rand(97,122); 
+                $ch = rand(97, 122);
                 echo 'ch = ', $ch, ' ';
                 $txt = chr($ch);
                 echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = strtoupper($txt);
-            } elseif ($dice == 1) {
-                echo 'alpha lower';
-                $ch = rand(65,90); echo 'ch = ', $ch, ' ';
-                $txt = chr($ch);
-                echo ' ASCII: ', $txt, ' ';
-                $this->password[$n] = strtolower($txt);
-            } elseif ($dice == 2) {
-                echo 'number';
-                $ch = rand(48,57);
-                $txt = chr($ch);
-                echo 'ASCII ', $txt, ' ' ;
-                $this->password[$n] = $txt;
-            } elseif ($dice == 3) {
-                echo 'symbol';
-                $ch = rand(33,47);
-                $txt = chr($ch);
-                echo ' ASCII: ', $txt, ' ';
-                $this->password[$n] = $txt;
-            }
-                echo ' ', $this->password,' <br />';
                 $n++;
-        }
-            
-        /*
-        while ($n < $this->length) {
-            $n++;
-            echo 'N is: ', $n, ' Password is:', $this->password, ' <br />';
-
-// choose a character type
-            $dice = rand(0, 3); // roll the dice
-// check if the dice value was valid, otherwise roll again
-
-            echo 'Dice Roll Result was: ', $dice, ' <br/> ';
-
-            if ($dice == alpha_upper_include) {
-                $txt = chr(rand(1, 26));
-                echo $txt;
-                $this->password[$n] = strtoupper($txt);
-            } elseif ($dice == alpha_lower_include) {
-                $txt = chr(rand(1, 26));
-                echo $txt;
+            } elseif ($dice == 1 AND $this->alpha_lower_include) {
+                echo 'alpha lower';
+                $ch = rand(65, 90);
+                echo 'ch = ', $ch, ' ';
+                $txt = chr($ch);
+                echo ' ASCII: ', $txt, ' ';
                 $this->password[$n] = strtolower($txt);
-            } elseif ($dice == number) {
-                echo 'its a number';
-                $this->password[$n] = rand(0, 9);
-            } elseif ($dice == symbol) {
-                echo 'its a symbol';
-                $this->password[$n] = '!';
+                $n++;
+            } elseif ($dice == 2 AND $this->number_include) {
+                echo 'number';
+                $ch = rand(48, 57);
+                $txt = chr($ch);
+                echo 'ASCII ', $txt, ' ';
+                $this->password[$n] = $txt;
+                $n++;
+            } elseif ($dice == 3 AND $this->symbol_include) {
+                echo 'symbol';
+                $ch = rand(33, 47);
+                $txt = chr($ch);
+                echo ' ASCII: ', $txt, ' ';
+                $this->password[$n] = $txt;
+                $n++;
             }
-        } // end while
-        return $this->password;
-         */ 
+            echo ' ', $this->password, ' <br />';
+        }
+
+        /*
+          while ($n < $this->length) {
+          $n++;
+          echo 'N is: ', $n, ' Password is:', $this->password, ' <br />';
+
+          // choose a character type
+          $dice = rand(0, 3); // roll the dice
+          // check if the dice value was valid, otherwise roll again
+
+          echo 'Dice Roll Result was: ', $dice, ' <br/> ';
+
+          if ($dice == alpha_upper_include) {
+          $txt = chr(rand(1, 26));
+          echo $txt;
+          $this->password[$n] = strtoupper($txt);
+          } elseif ($dice == alpha_lower_include) {
+          $txt = chr(rand(1, 26));
+          echo $txt;
+          $this->password[$n] = strtolower($txt);
+          } elseif ($dice == number) {
+          echo 'its a number';
+          $this->password[$n] = rand(0, 9);
+          } elseif ($dice == symbol) {
+          echo 'its a symbol';
+          $this->password[$n] = '!';
+          }
+          } // end while
+          return $this->password;
+         */
     }
 
-         
 // end function GeneratePassword
 }
 
