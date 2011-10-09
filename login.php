@@ -38,6 +38,7 @@ if (isset($_POST['submitted'])) {
         // Assign $data to $errors for error reporting
         // in the login_page.inc.php file
         $errors = $data;
+        echo 'sorry you are not logged in  - please login here.' ;
     }
 
     pg_close($sc_connection); // close he db connection
@@ -47,6 +48,6 @@ if (isset($_POST['submitted'])) {
 session_start();
 
 // include 'includes/header.inc.php';
-include 'includes/login_page.inc.php';
+//include 'includes/login_page.inc.php';
 // include 'includes/footer.inc.php';
 ?>
