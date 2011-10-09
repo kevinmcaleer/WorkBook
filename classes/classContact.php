@@ -66,7 +66,7 @@ class Contact {
 
     public function save() {
         include 'includes/connection.php';
-        include 'includes/classPassword.php';
+        include 'classes/classPassword.php';
 
         $newPass = new Password();  // Generate a new password
         $this->pass = $newPass->generatePassword();
