@@ -22,7 +22,7 @@ class Password {
         $n = 0;
         while ($n <= $this->length) {
             $n++;
-
+echo 'N is: ', $n,'<br />';
 
 // choose a character type
             $dice = rand(0,3); // roll the dice
