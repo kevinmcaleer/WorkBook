@@ -34,8 +34,11 @@ class Password {
         echo $this->length;
         while ($n < $this->length)
         {
-            echo $n;
+            echo $n, '<br />';
             $n++;
+            $dice =rand(0,4);
+            echo 'Dice is: ', $dice;
+            
         }
             
         /*
