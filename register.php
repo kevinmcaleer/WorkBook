@@ -1,7 +1,7 @@
 <?php
 // Register Page
 
-include 'includes/header.php';
+include 'includes/header_nologin.php';
 ?>
 <?php
 if (isset($_POST['submitted'])) {
