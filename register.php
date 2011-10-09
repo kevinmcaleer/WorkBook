@@ -3,6 +3,19 @@
 
 include 'includes/header.php';
 ?>
+<?php
+if (isset($_POST['submitted']))
+{    
+?>
+Submitted!
+
+<?php
+}
+else {
+    
+
+?>
+
 <h1>Register</h1>
 <form>
     <table>
@@ -13,6 +26,8 @@ include 'includes/header.php';
 
 
 </form>
+
 <?php
+}
 include 'includes/footer.php';
 ?>
