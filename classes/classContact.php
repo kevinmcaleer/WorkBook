@@ -88,6 +88,7 @@ class Contact {
         $newPass = new Password();  // Generate a new password
         $this->pass = $newPass->generatePassword(8);
         $query = "INSERT INTO contacts (firstname, surname, email, pass) VALUES ('$this->firstname', '$this->surname', '$this->email', '$this->pass')";
+        echo $query;
         $result = pg_query($connection, $query);
     }
 
