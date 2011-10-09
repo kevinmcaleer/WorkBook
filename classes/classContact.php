@@ -42,24 +42,28 @@ class Contact {
         $this->pass = $rows["pass"];
         pg_close($connection);
     }
-    public function checkValid($email, $password)
-    {
+
+    public function checkValid($email, $password) {
         include 'includes/connection.php';
         $query = "SELECT id, email, pass FROM contact WHERE email=$email AND pass = $password";
         $result = pg_query($connection, $query);
         return $result;
     }
-public function checkExists($email)
-{
-    include 'includes/connection.php';
-    $query = "SELECT contacts.id, contacts.email FROM contacts WHERE email='$this->email'";
-    $result = pg_query($connection, $query);
-    $row = pg_fetch_all($result);
-    echo $row;
-    
-    return false; //TODO change this to return true if there are more than 1 rows
-}
-}
 
+    public function checkExists($email) {
+        include 'includes/connection.php';
+        $query = "SELECT contacts.id, contacts.email FROM contacts WHERE email='$this->email'";
+        $result = pg_query($connection, $query);
+        $row = pg_fetch_all($result);
+        if (pg_num_rows($result) > 0) {
+            // there is more than one row - email is already registerd
+            return true;
+        } else {
+            // email hasn't been registered yet
+            return false;
+        }
+    }
+
+}
 ?>
 
