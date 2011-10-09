@@ -48,10 +48,7 @@ if (isset($_POST['submitted'])) {
         header("location: $url");
 
         exit(); // Quit the script
-    } else { // Unsuccessful
-        session_start();
-        $error = true;
-    }
+    
 } // end of the main submit conditional
 
 
@@ -60,7 +57,7 @@ include 'includes/header.php';
 //include 'includes/login_page.inc.php';
 // include 'includes/footer.inc.php';
 
-if ($error) {
+if (!$check) {
     echo '<div class="box">';
     echo 'Sorry there was a problem with your username and password';
     echo '</div>';
