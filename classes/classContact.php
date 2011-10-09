@@ -29,6 +29,7 @@ class Contact {
 
     public function load($id) {
         include 'includes/connection.php';
+        $this->id = $id;
         $query = "SELECT id, firstname, surname FROM contacts WHERE id = $this->id";
         $result = pg_query($connection, $query);
 
@@ -44,6 +45,7 @@ class Contact {
         $this->pass = $rows["pass"];
         }
         else {
+            // No Records Found
             echo 'no records found.';
         }
         pg_close($connection);
