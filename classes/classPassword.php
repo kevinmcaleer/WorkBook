@@ -36,7 +36,7 @@ class Password {
         {
             echo 'N is: ', $n, '<br />';
             $n++;
-            $dice =rand(0,4);
+            $dice =rand(0,3);
             echo 'Dice is: ', $dice, ' ';
             if ($dice == 0) {
                 // alpha upper
