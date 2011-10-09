@@ -48,7 +48,7 @@ if (isset($_POST['submitted'])) {
         header("location: $url");
 
         exit(); // Quit the script
-    
+    } 
 } // end of the main submit conditional
 
 
