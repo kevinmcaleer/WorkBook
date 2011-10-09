@@ -21,7 +21,8 @@ if (isset($_POST['submitted'])) {
         // if FALSE then the user has not registered this email address
         
         $newUser->save();
-        echo 'Submitted!';
+        echo '<div class="tb">Submitted!</div>';
+        echo 'We have sent a Welcome email to the email address: $newUser->email, this includes your temporary password'; 
     }    
     
 } else {
