@@ -10,8 +10,16 @@
         <title></title>
     </head>
     <body>
-        <?php
-        // put your code here
-        ?>
-    </body>
-</html>
+        <table><tr><td>        
+   <?php
+   include 'includes/nav.php';
+   
+   ?>
+                </td>
+                <td>
+                    <?php
+                    // TODO if logged in the show acount, otherwise show the login link
+                    echo '<a href="login.php">Login</a>';
+                    ?>
+                    
+                </td>
