@@ -7,11 +7,6 @@
 
 if (isset($_POST['submitted'])) {
 
-    // TODO create a userlogin class / user contact
-    // TODO pass it the email and password details
-    // TODO see if user is valid 
-    // Need the database connection:
-
     include 'classes/classContact.php';
     $myAccount = new Contact();
 
@@ -35,15 +30,9 @@ if (isset($_POST['submitted'])) {
 
         exit(); // Quit the script
     } else { // Unsuccessful
-        // Assign $data to $errors for error reporting
-        // in the login_page.inc.php file
-        //echo "Sorry that wasn't correct";
         $error = true;
     }
-
-    //pg_close($connection); // close he db connection
 } // end of the main submit conditional
-//
 
 session_start();
 

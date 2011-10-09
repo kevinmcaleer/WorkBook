@@ -9,7 +9,7 @@
                 
             </tr>
         </table>    
-        <input type="hidden" value="submitted"></input>
+        <input type="hidden" name="submitted" value="TRUE"></input>
     </form>        
     
 </div>
