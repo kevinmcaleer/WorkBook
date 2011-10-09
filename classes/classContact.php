@@ -52,7 +52,7 @@ class Contact {
 public function checkExists($email)
 {
     include 'includes/connection.php';
-    $query = "SELECT id, email FROM contact WHERE email=$this->email";
+    $query = "SELECT id, email FROM contacts WHERE email=$this->email";
     $result = pg_query($connection, $query);
     $row = pg_fetch_all($result);
     echo $row;
