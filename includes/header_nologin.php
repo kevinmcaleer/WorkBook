@@ -2,12 +2,6 @@
 // @project Workbook / Princify
 // @author Kevin McAleer
 // @version 1.0
-
-session_start();
-if (!isset($_SESSION['id'])) {
-    include 'includes/login_page.php';
-    exit;
-}
 ?>
 <!DOCTYPE html>
 <html>
@@ -17,9 +11,6 @@ if (!isset($_SESSION['id'])) {
     </head>
     <body>
         <table><tr><td>        
-<?php
-//include 'includes/nav.php';
-?>
                 </td>
                 <td>
 
