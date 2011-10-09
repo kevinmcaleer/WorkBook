@@ -46,11 +46,14 @@ echo 'N is: ', $n,' Password is:', $this->password,' <br />';
                     }
                     break;
                 case 2:// number
+                    echo 'Its a Number: ';
                     if ($this->number_include == TRUE){
                         $this->password[$n] = rand(0,9);
                     }
+                    
                     break;
                 case 3:// symbol
+                    echo 'Its a Symbol: ';
                     if ($this->symbol_include == TRUE) {
                         // TODO include more symbols to chose from!
                         $this->password[$n] = '!';
