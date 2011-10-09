@@ -37,6 +37,7 @@ if (isset($_POST['submitted'])) {
         // Assign $data to $errors for error reporting
         // in the login_page.inc.php file
         $errors = $data;
+    
     }
 
     //pg_close($connection); // close he db connection
