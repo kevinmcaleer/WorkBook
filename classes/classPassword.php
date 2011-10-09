@@ -11,12 +11,14 @@ class Password {
     public $number_include = TRUE;
     public $symbol_include = TRUE;
 
-    public function generatePassword() {
+    public function generatePassword($p_len) {
 
 // for the length of the password string, choose  one of the 4 types available (if true) and then
 // initiate variables
 
+        $this->length = $p_len;
         $this->password = "";
+        $this->password[0] = $this->length;
         $n = 0;
         while ($n <= $this->length) {
             $n++;

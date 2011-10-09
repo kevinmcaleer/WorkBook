@@ -69,7 +69,7 @@ class Contact {
         include 'classes/classPassword.php';
 
         $newPass = new Password();  // Generate a new password
-        $this->pass = $newPass->generatePassword();
+        $this->pass = $newPass->generatePassword(8);
         $query = "INSERT INTO contacts (firstname, surname, email, pass) VALUES ('$this->firstname', '$this->surname', '$this->email', '$this->pass')";
         $result = pg_query($connection, $query);
     }
