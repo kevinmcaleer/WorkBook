@@ -17,8 +17,8 @@ class Password {
 // initiate variables
 
         $this->length = $p_len;
-        $this->password = "";
-        $this->password[0] = $this->length;
+        $this->password = "xxxxxxxx";
+        //$this->password[0] = $this->length;
         $n = 0;
         while ($n <= $this->length) {
             $n++;
