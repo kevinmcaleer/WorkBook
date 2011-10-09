@@ -47,12 +47,14 @@ echo 'N is: ', $n,' Password is:', $this->password,' <br />';
                         echo 'alpha_upper_include must have been false <br />';
                         
                     }
-                    echo 'number';
+                    
                     break;
                 case 1:// alpha_lower
                    echo 'Its a Lower Case Alpha';
                     if ($this->alpha_lower_include == TRUE) {
-                        $this->password[$n] = strtolower(chr(rand(1, 26)));
+                        $txt = chr(rand(1,26));
+                        echo $txt;
+                        $this->password[$n] = strtolower($txt);
                     }
                     break;
                 case 2:// number
