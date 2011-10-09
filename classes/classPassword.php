@@ -19,7 +19,7 @@ class Password {
         $this->length = $p_len;
         $this->password = "xxxxxxxx";
         //$this->password[0] = $this->length;
-        $n = 1;
+        $n = 0;
         while ($n <= $this->length) {
             $n++;
 
@@ -29,7 +29,9 @@ class Password {
             switch ($dice) {
                 case 0: // alpha_upper
                     if ($this->alpha_upper_include == TRUE) {
-                        $this->password[$n] = strtoupper(chr(rand(1, 26)));
+                        $txt = chr(rand1,26);
+                        echo $txt;
+                        $this->password[$n] = strtoupper($txt);
                     }
                     break;
                 case 1:// alpha_lower
