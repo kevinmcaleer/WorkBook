@@ -41,6 +41,7 @@ class Contact {
         $this->email = $rows["email"];
         $this->pass = $rows["pass"];
         pg_close($connection);
+        echo $this->firstname;
     }
 
     public function checkValid($email, $password) {
