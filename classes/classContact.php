@@ -79,8 +79,8 @@ class Contact {
         $welcomemsg = "Welcome to Princify. Thank you for registering, your temporary password is: $this->pass Please goto beta.princify.com/login.php to login now";
         $to = $this->email;
         $subject = "Welcome to Princify";
-
-        mail($to, $subject, $welcomemsg);
+        $headers = "From: 'no-reply@princify.com'";
+        mail($to, $subject, $welcomemsg,$headers);
     }
 
 }
