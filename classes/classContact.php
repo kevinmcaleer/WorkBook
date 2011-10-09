@@ -45,7 +45,7 @@ class Contact {
 
     public function checkValid($email, $password) {
         include 'includes/connection.php';
-        $query = "SELECT id, email, pass FROM contact WHERE email=$email AND pass = $password";
+        $query = "SELECT id, email, pass FROM contacts WHERE email=$email AND pass = $password";
         $result = pg_query($connection, $query);
         return $result;
     }
