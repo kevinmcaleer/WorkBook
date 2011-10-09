@@ -51,6 +51,17 @@ include 'includes/header.php';
 // include 'includes/footer.inc.php';
 ?>
 <h1>Login page</h1>
+<div class="box">
+    <form action="login.php" method="post">
+        <table>
+            <tr>
+                <td><input type="text"name="Email:">Email</input></td>
+            </tr>
+        </table>    
+        
+    </form>        
+    
+</div>
 
 <a href="register.php">Click here to Register</a>
 <?php
