@@ -29,7 +29,7 @@ class Password {
             switch ($dice) {
                 case 0: // alpha_upper
                     if ($this->alpha_upper_include == TRUE) {
-                        $txt = chr(rand1,26);
+                        $txt = chr(rand(1,26));
                         echo $txt;
                         $this->password[$n] = strtoupper($txt);
                     }
