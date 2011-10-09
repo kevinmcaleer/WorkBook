@@ -15,7 +15,13 @@ class Password {
 
 // for the length of the password string, choose  one of the 4 types available (if true) and then
 // initiate variables
-
+echo 'password is: ', $this->password;
+echo 'Lenth is: ', $this->length;
+echo 'Alpha_upper_include is: ', $this->alpha_upper_include;
+echo 'Alpha_lower_include is:', $this->alpha_lower_include;
+echo 'Number_include is:', $this->number_include;
+echo 'Symbol_Include is: ', $this->symbol_include;
+        
         $this->length = $p_len;
         $this->password = "xxxxxxxx";
         //$this->password[0] = $this->length;
@@ -29,6 +35,7 @@ echo 'N is: ', $n,' Password is:', $this->password,' <br />';
             echo 'Dice Roll Result was: ', $dice,' <br />';
             switch ($dice) {
                 case 0: // alpha_upper
+                    echo 'Its an alpha Upper Case';
                     if ($this->alpha_upper_include == TRUE) {
                         $txt = chr(rand(1,26));
                         echo $txt;
@@ -41,6 +48,7 @@ echo 'N is: ', $n,' Password is:', $this->password,' <br />';
                     }
                     break;
                 case 1:// alpha_lower
+                   echo 'Its a Lower Case Alpha';
                     if ($this->alpha_lower_include == TRUE) {
                         $this->password[$n] = strtolower(chr(rand(1, 26)));
                     }
