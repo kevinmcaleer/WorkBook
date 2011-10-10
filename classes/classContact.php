@@ -1,16 +1,18 @@
 <?php
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of classContact
  *
- * @author kev
+ * @author Kevin McAleer
+ * @version 1.0
+ * 
+ * @package Contact
  */
 class Contact {
+    
+    /**
+     * @abstract Contact Class for holding people data
+     */
 
 // FIXME something
 // TODO something else
@@ -28,6 +30,14 @@ class Contact {
     public $pass = 'password';
     public $changepassword = FALSE;
 
+    /**
+     *
+     * @param type $id The Primary Key
+     * @param type $firstname Users First Name
+     *  
+     */
+     
+    
     public function load($id) {
         include 'includes/connection.php';
         $this->id = $id;
